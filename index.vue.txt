@@ -1,0 +1,509 @@
+<template>
+    <div id="home">
+        <nav 
+            class="navbar navbar-expand-lg fixed-top navbar-light"
+            :class="{ 'bg-light': lightNavbar }">
+            <div class="container">
+                <div>
+                    <button 
+                        class="btn btn-default open-menu d-inline-block d-xl-none"
+                        @click="openMobileNav()">
+                            <no-ssr>
+                                <icon icon="bars" class="icon"/>
+                            </no-ssr>
+                    </button>
+                    <a 
+                        class="navbar-brand" 
+                        href="#"
+                        @click.prevent="scrollTo('home')">
+                            <img src="~assets/img/logo.png" height="46">
+                    </a>
+                    <a href="tel:8778397378" class="phone-number d-none d-sm-inline-block">
+                        <no-ssr>
+                            <icon icon="phone" flip="horizontal" style="margin-right: 8px"/>
+                        </no-ssr>
+                        <span class="d-none d-md-inline-block">877.8.EXPERT</span>
+                    </a>
+                    <a 
+                        href="tel:8778397378" 
+                        style="margin-left: 10px" 
+                        class="phone-number d-none d-sm-inline-block">
+                        877.839.7378
+                    </a>
+                </div>
+                <ul class="navbar-nav d-none d-xl-flex">
+                    <li class="nav-item">
+                        <a 
+                            class="nav-link" 
+                            @click.prevent="scrollTo('home')"
+                            href="#">
+                                Home
+                        </a>
+                    </li> 
+                    <li class="nav-item">
+                        <a 
+                            class="nav-link"
+                            @click.prevent="scrollTo('collections')" 
+                            href="#">
+                                Collections
+                        </a>
+                    </li> 
+                    <li class="nav-item">
+                        <a 
+                            class="nav-link" 
+                            @click.prevent="scrollTo('price-list')"
+                            href="#">
+                                Price List
+                        </a>
+                    </li> 
+                    <li class="nav-item">
+                        <a 
+                            class="nav-link" 
+                            @click.prevent="scrollTo('contact-form')"
+                            href="#">
+                            Contact Us
+                        </a>
+                    </li> 
+                    <li class="nav-item">
+                        <a 
+                            class="nav-link" 
+                            @click.prevent="scrollTo('policies')"
+                            href="#">
+                                Policies
+                        </a>
+                    </li> 
+                </ul>
+                <div class="row">
+                    <a :href="loginUrl">
+                        <button class="btn btn-link">Login</button>
+                    </a>
+                    <a 
+                        href="#"
+                        @click.prevent="scrollTo('payment')">
+                            <button class="btn btn-primary">
+                                Pay For Repairs
+                            </button>
+                    </a>
+                </div>
+            </div>
+        </nav>
+
+        <!-- MOBILE NAV -->
+        <nav 
+            class="mobile row align-items-center justify-content-center">
+            <div class="navigation-container">
+                <ul>
+                    <li>
+                        <a 
+                            href="#"
+                            @click.prevent="scrollTo('home')">
+                                Home
+                        </a>
+                    </li> 
+                    <li>
+                        <a 
+                            href="#"
+                            @click.prevent="scrollTo('collections')">
+                                Collections
+                        </a>
+                    </li> 
+                    <li>
+                        <a 
+                            href="#"
+                            @click.prevent="scrollTo('price-list')">
+                                Price List
+                        </a>
+                    </li> 
+                    <li>
+                        <a 
+                            href="#"
+                            @click.prevent="scrollTo('contact-form')">
+                                Contact Us
+                        </a>
+                    </li> 
+                    <li>
+                        <a 
+                            href="#"
+                            @click.prevent="scrollTo('policies')">
+                                Policies
+                        </a>
+                    </li> 
+                </ul>
+
+                <a href="tel:8778397378" class="phone-number">
+                    <no-ssr>
+                        <icon icon="phone" flip="horizontal" style="margin-right: 8px"/>
+                    </no-ssr>
+                    877.8.EXPERT
+                </a>
+
+                <a href="tel:8778397378" style="margin-left: 10px" class="phone-number">
+                    877.839.7378
+                </a>
+
+                <button 
+                    class="btn btn-default close-menu"
+                    @click="closeMobileNav()">
+                        <no-ssr>
+                            <icon icon="times" class="icon"/>
+                        </no-ssr>
+                </button>
+            </div>
+        </nav>
+
+        <!-- MOBILE PHONE FAB -->
+        <a href="tel:8778397378" id="phone-fab">
+            <button class="btn btn-default">
+                <no-ssr>
+                    <icon icon="phone" flip="horizontal"/>
+                </no-ssr>
+            </button>
+        </a>
+
+        <div class="container-fluid">
+            <!-- INTRO -->
+            <section class="row" id="intro">
+                <div class="col-md intro-container">
+                    <div class="container" style="height: 100%;">
+                        <div class="row align-items-center" style="height: 100%;">
+                            <div class="col-md text-primary text-uppercase">
+                                <h1>Signature Jewelry</h1>
+                                <h2>Specializing in invisible set diamond jewelry</h2>
+                                <h3>We have the answers to your problems</h3>
+                            </div>
+                        </div>
+                        
+                        <svg class="white-path" width="100%" height="41px" viewBox="0 0 806 41" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                            <!-- Generator: Sketch 47 (45396) - http://www.bohemiancoding.com/sketch -->
+                            <desc>Created with Sketch.</desc>
+                            <defs></defs>
+                            <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                <polygon id="Path" fill="#FFFFFF" transform="translate(403.470703, 20.361328) scale(-1, 1) translate(-403.470703, -20.361328) " points="0.94140625 40.7226563 9.86967454 40.7226563 806 40.7226563 806 0"></polygon>
+                            </g>
+                        </svg>
+                        <svg class="blue-path" width="100%" height="192px" viewBox="0 0 805 192" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                            <defs></defs>
+                            <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                <polygon id="Path" fill="#0111AA" points="-0.05859375 191.722656 8.86967454 191.722656 805 191.722656 805 0.75390625"></polygon>
+                            </g>
+                        </svg>
+                    </div>
+                </div>
+            </section>
+
+            <!-- COLLECTIONS -->
+            <section class="row" id="collections">
+                <div class="col-md">
+                    <div class="row">
+                        <div class="col-md">
+                            <div class="section">
+                                <h3 class="section-title">Repaired Jewelry</h3>
+                                <h4>Specializing in invisible set diamond jewelry</h4>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="container">
+                        <!-- <div class="row justify-content-center"> -->
+                            <transition-group name="list" tag="div" class="row justify-content-center">
+                                <div 
+                                    class="col collection-container" 
+                                    v-for="item in perLoad"
+                                    :key="`collection-item-${item}`">
+                                    <div class="collection">
+                                        <img :src="`/images/collection/item-${item}.png`"/>
+                                    </div>
+                                </div>
+                            </transition-group>
+                        <!-- </div> -->
+                        <div class="row justify-content-center">
+                            <button 
+                                class="btn btn-primary primary"
+                                v-if="perLoad < itemCount"
+                                @click="loadMore()">
+                                Load more
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <svg class="white-path" width="100%" height="41px" viewBox="0 0 806 41" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                    <!-- Generator: Sketch 47 (45396) - http://www.bohemiancoding.com/sketch -->
+                    <desc>Created with Sketch.</desc>
+                    <defs></defs>
+                    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                        <polygon id="Path" fill="#FFFFFF" transform="translate(403.470703, 20.361328) scale(-1, 1) translate(-403.470703, -20.361328) " points="0.94140625 40.7226563 9.86967454 40.7226563 806 40.7226563 806 0"></polygon>
+                    </g>
+                </svg>
+            </section>
+            
+            <!-- PRICE LIST -->
+            <section class="row" id="price-list">
+                <div class="col-md">
+                    <div class="row">
+                        <div class="col-md">
+                            <div class="section">
+                                <h3 class="section-title">Price List</h3>
+                                <h4>For estimates on repair, please call for prices!</h4>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-4 price" v-for="price in pricelist">
+                                <no-ssr>
+                                    <icon :icon="['far', 'gem']" size="3x" class="text-primary icon"/>
+                                </no-ssr>
+                                <h2>
+                                    {{ price.price }}
+                                </h2>
+                                <h3>
+                                    {{ price.name }}
+                                </h3>
+                                <!-- <p>{{ price.description }}</p> -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- PAY FOR REPAIRS -->
+            <section class="row align-items-center" id="payment">
+                <div class="col-md">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md">
+                                <h5>Pay for repairs</h5>
+                                
+                                <div class="row justify-content-center">
+                                    <div class="col-md-5">
+                                        <form action="https://www.paypal.com/cgi-bin/webscr" method="POST">
+                                            <input 
+                                                type="text" 
+                                                class="form-control main" 
+                                                :value="$store.state.invoiceNumber"
+                                                @keyup="$store.commit('SET', { key: 'invoiceNumber', value: $event.target.value })"
+                                                placeholder="Invoice number">
+                                            
+                                            <input 
+                                                type="number" 
+                                                name="amount"
+                                                step="any"
+                                                class="form-control main" 
+                                                placeholder="Amount">
+
+                                            <input name="add" value="1" type="hidden">
+                                            <input name="cmd" value="_cart" type="hidden">
+                                            <input name="business" value="signaturejewelry@hotmail.com" type="hidden">
+                                            <input name="item_number" value="001" type="hidden">
+                                            <input name="no_shipping" value="0" type="hidden">
+                                            <input name="no_note" value="1" type="hidden">
+                                            <input name="currency_code" value="USD" type="hidden">
+                                            <input name="item_name" :value="`Pay For Repairs, invoice # ${$store.state.invoiceNumber}`" type="hidden"/>
+                                            <input name="lc" value="US" type="hidden">
+                                            <input name="bn" value="PP-ShopCartBF" type="hidden">
+                                            <input name="shopping_url" :value="$store.state.baseUrl" type="hidden">
+
+                                            <div class="row justify-content-center">
+                                                <button 
+                                                    type="submit"
+                                                    target="_blank"
+                                                    class="btn btn-light">Pay</button>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="row justify-content-center" id="contact-form">
+                <div class="col-md-6">
+                    <h5 class="section-title">
+                        Contact Us
+                    </h5>
+                    <div class="row">
+                        <div class="col-6">
+                            <div class="form-group">
+                                <input 
+                                    class="form-control main dark" 
+                                    type="text" 
+                                    placeholder="Name"
+                                    :value="message.name"
+                                    @keyup="$store.commit('SET_MESSAGE', { key: 'name', value: $event.target.value })"/>
+                                <no-ssr>
+                                    <icon :icon="['fas', 'user']" class="icon"/>
+                                </no-ssr>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="form-group">
+                                <input 
+                                    class="form-control main dark" 
+                                    type="email" 
+                                    placeholder="Email"
+                                    :value="message.email"
+                                    @keyup="$store.commit('SET_MESSAGE', { key: 'email', value: $event.target.value })"/>
+                                <no-ssr>
+                                    <icon :icon="['fas', 'envelope']" class="icon"/>
+                                </no-ssr>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <div class="form-group">
+                                <input 
+                                    class="form-control main dark" 
+                                    type="text" 
+                                    placeholder="Subject"
+                                    :value="message.subject"
+                                    @keyup="$store.commit('SET_MESSAGE', { key: 'subject', value: $event.target.value })"/>
+                                <no-ssr>
+                                    <icon :icon="['fas', 'font']" class="icon"/>
+                                </no-ssr>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <div class="form-group">
+                                <textarea 
+                                    class="form-control main dark" 
+                                    rows="10" 
+                                    placeholder="Message"
+                                    :value="message.message"
+                                    @keyup="$store.commit('SET_MESSAGE', { key: 'message', value: $event.target.value })"></textarea>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <div class="form-group">
+                                <div id="recaptcha"></div>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <div class="row justify-content-center">
+                                <no-ssr>
+                                    <el-button 
+                                        type="primary"
+                                        class="primary"
+                                        :loading="loading.sendingMessage"
+                                        @click="contact()">
+                                            Submit
+                                    </el-button>
+                                </no-ssr>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="row justify-content-center align-items-center" id="policies">
+                <div class="col-md-8">
+                    <div class="row justify-content-center">
+                        <no-ssr>
+                            <icon :icon="['far', 'gem']" size="3x"/>
+                        </no-ssr>
+                    </div>
+                    <h5 class="section-title">Policies</h5>
+                    <ul>
+                        <li>Items purchased may be exchanged within three (3) days of purchase for equal or greater value. Purchase date is determined based on sales receipt. No returns will be processed without notifying Signature Jewelry during the 3 day period. Notification must be in the form of a signed written notice faxed to Signature Jewelry which includes invoice number, payment method, item to be returned, and reason for return. In addition, to ensure that everything is processed smoothly, the client must contact us personally, either by phone or in person so that proper arrangements can be made for a refund and any return issues can be addressed.</li>
+                        <li>There are no exceptions</li>
+                    </ul>
+                </div>
+            </section>
+        </div>
+    </div>
+</template>
+
+<script>
+    /* global grecaptcha */
+    import { mapState } from 'vuex'
+    import $ from 'jquery'
+
+    export default {
+        data () {
+            return {
+                pricelist: [
+                    { price: '$10', name: 'Invisible Settings', description: '' },
+                    { price: '$6', name: 'Bazel', description: '' },
+                    { price: '$6 - $10', name: 'Pave', description: '' },
+                    { price: '$6', name: 'Chanel Bgt.', description: '' },
+                    { price: '$5', name: 'Chanel Round', description: '' },
+                    { price: '$50+', name: 'Center Stone', description: '' }
+                ],
+                perLoad: 10,
+                itemCount: 53,
+                loginUrl: '',
+                recaptcha: null,
+                lightNavbar: false,
+                mobileNavVisible: false,
+                loading: {
+                    sendingMessage: false
+                }
+            }
+        },
+        computed: {
+            ...mapState([
+                'loaders',
+                'message'
+            ])
+        },
+        mounted () {
+            this.loginUrl = `${window.location.protocol}//${window.location.hostname}:4040`
+            this.recaptcha = grecaptcha.render('recaptcha', {
+                'sitekey': '6LcyuEkUAAAAAAeyxeeuqxTRk5lu3hR02sIIuSOF',
+                'callback': this.onRecaptchaResponse
+            })
+
+            $(window).scroll(() => {
+                if ($(window).scrollTop() > 10) {
+                    this.lightNavbar = true
+                } else {
+                    this.lightNavbar = false
+                }
+            })
+            $(window).scroll()
+        },
+        methods: {
+            onRecaptchaResponse: function (value) {
+                this.$store.commit('SET_MESSAGE', { key: 'grecaptcha', value })
+            },
+            loadMore: function () {
+                if (this.perLoad + 10 >= this.itemCount) {
+                    this.perLoad = this.itemCount
+                    return
+                }
+
+                this.perLoad += 10
+            },
+            contact: async function () {
+                this.loading.sendingMessage = true
+                try {
+                    await this.$store.dispatch('contact')
+                } catch (e) {
+                    console.log('error sending message')
+                }
+                grecaptcha.reset(this.recaptcha)
+                this.loading.sendingMessage = false
+            },
+            scrollTo: function (id) {
+                if (this.mobileNavVisible) {
+                    this.closeMobileNav()
+                }
+
+                $('html, body').animate({
+                    scrollTop: $(`#${id}`).offset().top
+                }, 800)
+            },
+            openMobileNav: function () {
+                this.mobileNavVisible = true
+                $('nav.mobile').addClass('open').css('display', 'flex').animateCss('slideInUp')
+                $('body').addClass('no-scroll')
+            },
+            closeMobileNav: function () {
+                this.mobileNavVisible = false
+                $('nav.mobile').removeClass('open').animateCss('slideOutDown', function () {
+                    $('nav.mobile').hide()
+                    $('body').removeClass('no-scroll')
+                })
+            }
+        }
+    }
+</script>
